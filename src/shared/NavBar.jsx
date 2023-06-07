@@ -20,7 +20,7 @@ const NavBar = () => {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <img className="w-24" src="https://i.ibb.co/Qc4DFX9/1686129966225-removebg-preview.png" alt=" failed" />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -38,7 +38,7 @@ const NavBar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <a className="btn">get Started</a>
   </div>
 </div>
         </div>
