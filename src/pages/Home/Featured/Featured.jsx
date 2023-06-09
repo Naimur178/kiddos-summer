@@ -1,4 +1,4 @@
-
+import 'swiper/css/swiper.css'
 
 const Featured = () => {
     return (
