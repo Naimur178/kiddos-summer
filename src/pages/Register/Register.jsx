@@ -3,6 +3,7 @@ import  { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { updateProfile } from 'firebase/auth';
 import { AuthContext } from '../../providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Register = () => {
     useEffect(() => {
@@ -35,7 +36,7 @@ const Register = () => {
             updateUserData(result.user, name, photoURL);
             console.log(createdUser);
             setErrors('');
-            navigate('/');
+           
             
         })
         .catch(error =>{
@@ -52,8 +53,32 @@ const Register = () => {
             photoURL : url
         })
             .then(() => {
-                console.log('user name updated')
+                console.log('user name updated');
+                fetch('http://localhost:5000/users', {
+                            method: 'POST',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify(user)
+                        })
+                        .then(res => res.json())
+                            .then(data => {
+                                if (data.insertedId) {
+                                    
+                                    Swal.fire({
+                                        position: 'top-end',
+                                        icon: 'success',
+                                        title: 'User created successfully.',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                                    navigate('/');
+                                    
+                                }
+                            })
+
             })
+
             .catch(error => {
                 setErrors(error.message);
             })
