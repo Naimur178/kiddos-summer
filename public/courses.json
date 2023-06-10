@@ -1,0 +1,404 @@
+[
+    {
+      "courseTitle": "Oil Painting Masterclass",
+      "instructorName": "John Smith",
+      "courseImage": "https://shorturl.ac/7adw1",
+      "rating": 4.8,
+      "studentsCount": 500,
+      "price": 49.99,
+      "category": "Painting",
+      "description": "Learn the techniques and secrets of oil painting from a master artist."
+    },
+    {
+      "courseTitle": "Watercolor Basics",
+      "instructorName": "Emily Johnson",
+      "courseImage": "https://shorturl.ac/7adw2",
+      "rating": 4.5,
+      "studentsCount": 300,
+      "price": 29.99,
+      "category": "Painting",
+      "description": "Discover the beauty of watercolor painting and create stunning artworks."
+    },
+    {
+      "courseTitle": "Sculpting with Clay",
+      "instructorName": "Michael Brown",
+      "courseImage": "https://shorturl.ac/7adw5",
+      "rating": 4.9,
+      "studentsCount": 200,
+      "price": 39.99,
+      "category": "Sculpture",
+      "description": "Learn the art of sculpting with clay and create amazing three-dimensional artworks."
+    },
+    {
+        "courseTitle": "Acrylic Painting Fundamentals",
+        "instructorName": "Jennifer Davis",
+        "courseImage": "https://example.com/acrylic-painting.jpg",
+        "rating": 4.7,
+        "studentsCount": 250,
+        "price": 39.99,
+        "category": "Painting",
+        "description": "Master the foundational techniques of acrylic painting and unleash your creativity."
+      },
+      {
+        "courseTitle": "Introduction to Calligraphy",
+        "instructorName": "Robert Wilson",
+        "courseImage": "https://example.com/calligraphy.jpg",
+        "rating": 4.5,
+        "studentsCount": 150,
+        "price": 24.99,
+        "category": "Lettering",
+        "description": "Learn the art of beautiful handwriting and create stunning calligraphic designs."
+      },
+      {
+        "courseTitle": "Photography for Beginners",
+        "instructorName": "Sarah Thompson",
+        "courseImage": "https://example.com/photography.jpg",
+        "rating": 4.8,
+        "studentsCount": 500,
+        "price": 49.99,
+        "category": "Photography",
+        "description": "Get started with photography and capture breathtaking images with confidence."
+      },
+      {
+        "courseTitle": "Ceramic Pottery Workshop",
+        "instructorName": "David Anderson",
+        "courseImage": "https://example.com/ceramic-pottery.jpg",
+        "rating": 4.9,
+        "studentsCount": 300,
+        "price": 44.99,
+        "category": "Pottery",
+        "description": "Create beautiful ceramic pottery pieces with hands-on guidance from an experienced artist."
+      },
+      {
+        "courseTitle": "Digital Illustration Mastery",
+        "instructorName": "Laura Martin",
+        "courseImage": "https://example.com/digital-illustration.jpg",
+        "rating": 4.6,
+        "studentsCount": 400,
+        "price": 54.99,
+        "category": "Digital Art",
+        "description": "Unlock your digital art skills and bring your imagination to life through stunning illustrations."
+      },
+      {
+        "courseTitle": "Jewelry Making Essentials",
+        "instructorName": "Sophie Clark",
+        "courseImage": "https://example.com/jewelry-making.jpg",
+        "rating": 4.7,
+        "studentsCount": 200,
+        "price": 34.99,
+        "category": "Jewelry",
+        "description": "Learn the basics of jewelry making and create unique and stylish accessories."
+      },
+      {
+        "courseTitle": "Paper Crafts for All Ages",
+        "instructorName": "Mark Johnson",
+        "courseImage": "https://example.com/paper-crafts.jpg",
+        "rating": 4.4,
+        "studentsCount": 100,
+        "price": 19.99,
+        "category": "Paper Art",
+        "description": "Explore the world of paper crafts and make impressive creations using simple techniques."
+      },
+      {
+        "courseTitle": "Embroidery for Beginners",
+        "instructorName": "Anna Wilson",
+        "courseImage": "https://example.com/embroidery.jpg",
+        "rating": 4.8,
+        "studentsCount": 350,
+        "price": 29.99,
+        "category": "Textile Art",
+        "description": "Discover the art of embroidery and embellish fabrics with stunning needlework designs."
+      },
+      {
+        "courseTitle": "Woodworking Fundamentals",
+        "instructorName": "Michael Brown",
+        "courseImage": "https://example.com/woodworking.jpg",
+        "rating": 4.9,
+        "studentsCount": 280,
+        "price": 49.99,
+        "category": "Woodcraft",
+        "description": "Learn essential woodworking skills and create beautiful handmade wooden objects."
+      },
+      {
+        "courseTitle": "Mixed Media Collage Workshop",
+        "instructorName": "Emily Davis",
+        "courseImage": "https://example.com/mixed-media-collage.jpg",
+        "rating": 4.6,
+        "studentsCount": 180,
+        "price": 39.99,
+        "category": "Mixed Media",
+        "description": "Combine various art techniques and materials to create unique mixed media collage artworks."
+      },
+      {
+        "courseTitle": "Knitting for Beginners",
+        "instructorName": "Julia Anderson",
+        "courseImage": "https://example.com/knitting.jpg",
+        "rating": 4.7,
+        "studentsCount": 200,
+        "price": 29.99,
+        "category": "Knitting",
+        "description": "Start your knitting journey with basic stitches and create beautiful handmade garments."
+      },
+      {
+        "courseTitle": "Abstract Painting Techniques",
+        "instructorName": "Daniel Lee",
+        "courseImage": "https://example.com/abstract-painting.jpg",
+        "rating": 4.9,
+        "studentsCount": 300,
+        "price": 39.99,
+        "category": "Painting",
+        "description": "Learn to express your creativity through abstract art and develop your own unique style."
+      },
+      {
+        "courseTitle": "Macrame Workshop",
+        "instructorName": "Sophia Roberts",
+        "courseImage": "https://example.com/macrame.jpg",
+        "rating": 4.8,
+        "studentsCount": 150,
+        "price": 34.99,
+        "category": "Macrame",
+        "description": "Discover the art of knotting and create stunning decorative pieces using macrame techniques."
+      },
+      {
+        "courseTitle": "Digital Photography Masterclass",
+        "instructorName": "Alex Turner",
+        "courseImage": "https://example.com/digital-photography.jpg",
+        "rating": 4.6,
+        "studentsCount": 500,
+        "price": 49.99,
+        "category": "Photography",
+        "description": "Master the art of digital photography and capture breathtaking images like a pro."
+      },
+      {
+        "courseTitle": "Paper Mache Sculpting",
+        "instructorName": "Olivia Martin",
+        "courseImage": "https://example.com/paper-mache.jpg",
+        "rating": 4.5,
+        "studentsCount": 100,
+        "price": 24.99,
+        "category": "Sculpture",
+        "description": "Learn the versatile art of paper mache and create unique sculptures with inexpensive materials."
+      },
+      {
+        "courseTitle": "Digital Art for Beginners",
+        "instructorName": "Andrew Wilson",
+        "courseImage": "https://example.com/digital-art.jpg",
+        "rating": 4.7,
+        "studentsCount": 400,
+        "price": 44.99,
+        "category": "Digital Art",
+        "description": "Dive into the world of digital art and create stunning illustrations using digital tools."
+      },
+      {
+        "courseTitle": "Quilting Techniques",
+        "instructorName": "Grace Thompson",
+        "courseImage": "https://example.com/quilting.jpg",
+        "rating": 4.9,
+        "studentsCount": 250,
+        "price": 39.99,
+        "category": "Quilting",
+        "description": "Learn traditional and modern quilting techniques to create beautiful quilted masterpieces."
+      },
+      {
+        "courseTitle": "Embroidery and Beadwork Fusion",
+        "instructorName": "Emma Roberts",
+        "courseImage": "https://example.com/embroidery-beadwork.jpg",
+        "rating": 4.8,
+        "studentsCount": 300,
+        "price": 49.99,
+        "category": "Textile Art",
+        "description": "Combine embroidery and beadwork techniques to create stunning and intricate textile artworks."
+      },
+      {
+        "courseTitle": "Wood Carving Essentials",
+        "instructorName": "Jacob Johnson",
+        "courseImage": "https://example.com/wood-carving.jpg",
+        "rating": 4.7,
+        "studentsCount": 200,
+        "price": 39.99,
+        "category": "Woodcraft",
+        "description": "Learn the fundamentals of wood carving and create intricate designs on wood surfaces."
+      },
+      {
+        "courseTitle": "Hand Lettering for Beginners",
+        "instructorName": "Sophie Davis",
+        "courseImage": "https://example.com/hand-lettering.jpg",
+        "rating": 4.6,
+        "studentsCount": 150,
+        "price": 29.99,
+        "category": "Lettering",
+        "description": "Discover the art of hand lettering and create beautiful and personalized lettering designs."
+      },
+      {
+        "courseTitle": "Candle Making Workshop",
+        "instructorName": "Oliver Wilson",
+        "courseImage": "https://example.com/candle-making.jpg",
+        "rating": 4.9,
+        "studentsCount": 250,
+        "price": 34.99,
+        "category": "Candle Making",
+        "description": "Learn the art of candle making and create beautiful and fragrant candles for various occasions."
+      },
+      {
+        "courseTitle": "Pastel Painting Techniques",
+        "instructorName": "Emily Thompson",
+        "courseImage": "https://example.com/pastel-painting.jpg",
+        "rating": 4.5,
+        "studentsCount": 100,
+        "price": 24.99,
+        "category": "Painting",
+        "description": "Master the techniques of pastel painting and create soft and vibrant artworks."
+      },
+      {
+        "courseTitle": "Wire Sculpture Masterclass",
+        "instructorName": "Lucas Anderson",
+        "courseImage": "https://example.com/wire-sculpture.jpg",
+        "rating": 4.7,
+        "studentsCount": 180,
+        "price": 39.99,
+        "category": "Sculpture",
+        "description": "Explore the art of wire sculpture and create intricate and dynamic sculptures using wire."
+      },
+      {
+        "courseTitle": "Printmaking Techniques",
+        "instructorName": "Sophia Clark",
+        "courseImage": "https://example.com/printmaking.jpg",
+        "rating": 4.8,
+        "studentsCount": 300,
+        "price": 49.99,
+        "category": "Printmaking",
+        "description": "Learn various printmaking techniques and create unique prints with texture and depth."
+      },
+      {
+        "courseTitle": "Origami for Beginners",
+        "instructorName": "Adam Martin",
+        "courseImage": "https://example.com/origami.jpg",
+        "rating": 4.6,
+        "studentsCount": 200,
+        "price": 34.99,
+        "category": "Paper Art",
+        "description": "Discover the ancient art of origami and create intricate paper designs using folding techniques."
+      },
+      {
+        "courseTitle": "Sewing and Pattern Making",
+        "instructorName": "Isabella Wilson",
+        "courseImage": "https://example.com/sewing-pattern.jpg",
+        "rating": 4.9,
+        "studentsCount": 350,
+        "price": 44.99,
+        "category": "Sewing",
+        "description": "Learn the basics of sewing and pattern making to create custom-fit garments and accessories."
+      },
+      {
+        "courseTitle": "Watercolor Landscape Painting",
+        "instructorName": "David Roberts",
+        "courseImage": "https://example.com/watercolor-landscape.jpg",
+        "rating": 4.7,
+        "studentsCount": 250,
+        "price": 39.99,
+        "category": "Painting",
+        "description": "Master the techniques of watercolor painting and create breathtaking landscape artworks."
+      },
+      {
+        "courseTitle": "Jewelry Making Workshop",
+        "instructorName": "Emma Thompson",
+        "courseImage": "https://example.com/jewelry-making.jpg",
+        "rating": 4.8,
+        "studentsCount": 300,
+        "price": 49.99,
+        "category": "Jewelry Making",
+        "description": "Learn the art of jewelry making and create stunning handmade jewelry pieces."
+      },
+      {
+        "courseTitle": "Pottery Wheel Throwing",
+        "instructorName": "Daniel Johnson",
+        "courseImage": "https://example.com/pottery-throwing.jpg",
+        "rating": 4.7,
+        "studentsCount": 200,
+        "price": 39.99,
+        "category": "Pottery",
+        "description": "Master the technique of pottery wheel throwing and create unique ceramic vessels."
+      },
+      {
+        "courseTitle": "Fashion Illustration Masterclass",
+        "instructorName": "Sophie Davis",
+        "courseImage": "https://example.com/fashion-illustration.jpg",
+        "rating": 4.6,
+        "studentsCount": 150,
+        "price": 29.99,
+        "category": "Fashion Design",
+        "description": "Explore the world of fashion illustration and create stylish and expressive fashion sketches."
+      },
+      {
+        "courseTitle": "Leatherworking Basics",
+        "instructorName": "Oliver Wilson",
+        "courseImage": "https://example.com/leatherworking.jpg",
+        "rating": 4.9,
+        "studentsCount": 250,
+        "price": 34.99,
+        "category": "Leathercraft",
+        "description": "Learn the fundamentals of leatherworking and create beautiful leather goods and accessories."
+      },
+      {
+        "courseTitle": "Acrylic Pouring Techniques",
+        "instructorName": "Emily Thompson",
+        "courseImage": "https://example.com/acrylic-pouring.jpg",
+        "rating": 4.5,
+        "studentsCount": 100,
+        "price": 24.99,
+        "category": "Painting",
+        "description": "Discover the mesmerizing art of acrylic pouring and create abstract and colorful artworks."
+      },
+      {
+        "courseTitle": "Ceramic Sculpture Workshop",
+        "instructorName": "Lucas Anderson",
+        "courseImage": "https://example.com/ceramic-sculpture.jpg",
+        "rating": 4.7,
+        "studentsCount": 180,
+        "price": 39.99,
+        "category": "Sculpture",
+        "description": "Explore the art of ceramic sculpture and create unique and expressive clay sculptures."
+      },
+      {
+        "courseTitle": "Screen Printing Essentials",
+        "instructorName": "Sophia Clark",
+        "courseImage": "https://example.com/screen-printing.jpg",
+        "rating": 4.8,
+        "studentsCount": 300,
+        "price": 49.99,
+        "category": "Printmaking",
+        "description": "Learn the basics of screen printing and create custom prints on various surfaces."
+      },
+      {
+        "courseTitle": "Calligraphy for Beginners",
+        "instructorName": "Adam Martin",
+        "courseImage": "https://example.com/calligraphy.jpg",
+        "rating": 4.6,
+        "studentsCount": 200,
+        "price": 34.99,
+        "category": "Calligraphy",
+        "description": "Master the art of calligraphy and create beautiful hand-lettered designs."
+      },
+      {
+        "courseTitle": "Crochet Techniques",
+        "instructorName": "Isabella Wilson",
+        "courseImage": "https://example.com/crochet.jpg",
+        "rating": 4.9,
+        "studentsCount": 350,
+        "price": 44.99,
+        "category": "Crochet",
+        "description": "Learn the versatile art of crochet and create beautiful handmade garments and accessories."
+      },
+      {
+        "courseTitle": "Oil Painting for Intermediate Artists",
+        "instructorName": "David Roberts",
+        "courseImage": "https://example.com/oil-painting.jpg",
+        "rating": 4.7,
+        "studentsCount": 250,
+        "price": 39.99,
+        "category": "Painting",
+        "description": "Take your oil painting skills to the next level with advanced techniques and concepts."
+      }
+    
+  ]
+  

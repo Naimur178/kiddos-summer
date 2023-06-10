@@ -9,6 +9,10 @@ import Register from "../pages/Register/Register";
 import Courses from "../pages/Courses/Courses";
 import MyCourses from "../pages/Dashboard/MyCourses/MyCourses";
 import AddItem from "../pages/Dashboard/AddCourse/AddCourse";
+import PrivateRoute from "./PrivateRoute";
+import Dashboard from "../Layout/Dashboard";
+import AdminHome from "../pages/Dashboard/UserHome.jsx/UserHome";
+import UserHome from "../pages/Dashboard/UserHome.jsx/UserHome";
 
 export const router = createBrowserRouter([
     {
@@ -31,15 +35,32 @@ export const router = createBrowserRouter([
           path: 'courses',
           element: <Courses></Courses>
         },
-        {
-          path: 'mycourses',
-          element: <MyCourses></MyCourses>
-
-        },
+        
         {
           path: 'addCourse',
           element: <AddItem></AddItem>
         }
       ]
     },
+    {
+      path: '/dashboard',
+      element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+      children: [
+       
+        {
+          path: 'userhome',
+          element: <UserHome></UserHome>
+        },
+        {
+          path: 'mycourses',
+          element: <PrivateRoute><MyCourses></MyCourses></PrivateRoute>
+
+        },
+        {
+          path:'adminhome',
+          element: <AdminHome></AdminHome>
+        },
+
+      ]
+    }
   ]);

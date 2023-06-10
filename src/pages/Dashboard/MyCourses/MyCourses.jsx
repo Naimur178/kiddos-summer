@@ -3,7 +3,7 @@ const img ="https://img.freepik.com/free-photo/cruel-war-scenes-digital-painting
 
 const MyCourses = () => {
     return (
-        <div>
+        <div className="w-full ">
            
             <PageCover img={img} title={'Enrolled Courses'}></PageCover>
             <h2>hello from my course</h2>

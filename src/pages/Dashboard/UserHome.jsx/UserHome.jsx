@@ -7,14 +7,14 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, PieChart, Pie, Respon
 
 
 
-const AdminHome = () => {
+const UserHome = () => {
     const { user } = useAuth();
     const [axiosSecure] = useAxiosSecure();
 
     const { data: stats = {} } = useQuery({
-        queryKey: ['admin-stats'],
+        queryKey: ['user-stats'],
         queryFn: async () => {
-            const res = await axiosSecure('/admin-stats');
+            const res = await axiosSecure('/user-stats');
             return res.data;                
         }
     })
@@ -146,4 +146,6 @@ const AdminHome = () => {
     );
 };
 
-export default AdminHome;
+export default UserHome;
+
+
