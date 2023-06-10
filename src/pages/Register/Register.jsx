@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react';
+import  { useContext, useEffect, useState } from 'react';
 
-import { Link } from 'react-router-dom';
-import { getAuth, updateProfile } from 'firebase/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import { updateProfile } from 'firebase/auth';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Register = () => {
@@ -10,7 +10,8 @@ const Register = () => {
       }, []);
     const [errors, setErrors] = useState();
     const {createUser} = useContext(AuthContext);
-    const auth = getAuth();
+    const navigate = useNavigate();
+    
 
     const handleRegister= event=> {
         event.preventDefault();
@@ -34,6 +35,8 @@ const Register = () => {
             updateUserData(result.user, name, photoURL);
             console.log(createdUser);
             setErrors('');
+            navigate('/');
+            
         })
         .catch(error =>{
             console.log(error);

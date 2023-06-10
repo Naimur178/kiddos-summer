@@ -1,4 +1,4 @@
-import React from 'react';
+
 import "swiper/css";
 import "swiper/css/pagination";
 import SectionTItle from '../../../components/SectionTitle/SectionTItle';
@@ -16,7 +16,8 @@ const Popular = () => {
             <Swiper
                 slidesPerView={4}
                 spaceBetween={30}
-                centeredSlides={true}
+                // centeredSlides={true}
+                freeMode={true}
                 pagination={{
                     clickable: true,
                 }}

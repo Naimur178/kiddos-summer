@@ -7,6 +7,7 @@ import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import { GithubAuthProvider } from "firebase/auth";
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -112,6 +113,9 @@ const Login = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Kiddos | Login</title>
+            </Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col ">
                     <div className="text-center lg:text-left lg:px-36 lg:mx-6">
