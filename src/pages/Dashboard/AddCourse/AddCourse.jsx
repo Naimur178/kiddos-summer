@@ -1,9 +1,13 @@
 
 import { useForm } from 'react-hook-form';
-import useAxiosSecure from "../../../hooks/useAxiosSecure";
+
 import Swal from "sweetalert2";
 import SectionTItle from '../../../components/SectionTitle/SectionTItle';
+import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import PageCover from '../../../shared/PageCovers/PageCovers';
+const img = 'https://img.freepik.com/free-vector/stylish-glowing-digital-red-lines-banner_1017-23964.jpg?w=1380&t=st=1686397129~exp=1686397729~hmac=c4e3f9767de16b0c146257ab67c23c4956c9ecb372106b47ef83ff772915304a'
 
+const title = 'Add A Course';
 
 const img_hosting_token = import.meta.env.VITE_Image_Upload_token;
 
@@ -25,8 +29,8 @@ const AddItem = () => {
         .then(imgResponse => {
             if(imgResponse.success){
                 const imgURL = imgResponse.data.display_url;
-                const {name, price, category, recipe} = data;
-                const newItem = {name, price: parseFloat(price), category, recipe, image:imgURL}
+                const {name, price, category, courseDes} = data;
+                const newItem = {name, price: parseFloat(price), category, courseDes, image:imgURL}
                 console.log(newItem)
                 axiosSecure.post('/courses', newItem)
                 .then(data => {
@@ -50,6 +54,7 @@ const AddItem = () => {
     
     return (
         <div className="w-full px-10">
+            <PageCover img={img} title={title}></PageCover>
             <SectionTItle subHeading="What's new" heading="Add an item" ></SectionTItle>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full mb-4">
@@ -86,7 +91,7 @@ const AddItem = () => {
                     <label className="label">
                         <span className="label-text">Recipe Details</span>
                     </label>
-                    <textarea {...register("recipe", { required: true })} className="textarea textarea-bordered h-24" placeholder="Bio"></textarea>
+                    <textarea {...register("courseDes", { required: true })} className="textarea textarea-bordered h-24" placeholder="Bio"></textarea>
                 </div>
                 <div className="form-control w-full my-4">
                     <label className="label">
