@@ -6,6 +6,7 @@ import { FcGoogle} from "react-icons/fc";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import { GithubAuthProvider } from "firebase/auth";
 import { AuthContext } from '../../providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 
 
@@ -64,6 +65,16 @@ const Login = () => {
             const userMail ={
                 email: loggedUser.email
             }
+            Swal.fire({
+                title: 'User Login Successful.',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                }
+            });
+            
             navigate(from, {replace: true});
             setErrors(null)
             fetch('http://localhost:5000/jwt', {
