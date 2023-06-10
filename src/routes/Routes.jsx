@@ -7,6 +7,7 @@ import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Courses from "../pages/Courses/Courses";
+import MyCourses from "../pages/Dashboard/MyCourses/MyCourses";
 
 export const router = createBrowserRouter([
     {
@@ -28,6 +29,11 @@ export const router = createBrowserRouter([
         {
           path: 'courses',
           element: <Courses></Courses>
+        },
+        {
+          path: 'mycourses',
+          element: <MyCourses></MyCourses>
+
         }
       ]
     },

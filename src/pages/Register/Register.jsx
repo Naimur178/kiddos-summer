@@ -22,6 +22,7 @@ const Register = () => {
         const email = form.email.value;
         const photoURL = form.photo.value;
         const password = form.password.value;
+        
         if(password.length==0 || email.length==0){
             return setErrors('email and password field cannot be empty')
         }
@@ -48,12 +49,18 @@ const Register = () => {
 
     }
     const updateUserData = (user, name, url)=>{
+        user.role ='user'
+       
+
+
         updateProfile(user, {
             displayName: name,
             photoURL : url
         })
+
             .then(() => {
                 console.log('user name updated');
+                console.log(user)
                 fetch('http://localhost:5000/users', {
                             method: 'POST',
                             headers: {

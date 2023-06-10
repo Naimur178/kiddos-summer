@@ -1,55 +1,12 @@
+import PageCover from "../../../shared/PageCovers/PageCovers";
+const img ="https://img.freepik.com/free-photo/cruel-war-scenes-digital-painting_456031-162.jpg?w=1380&t=st=1686392156~exp=1686392756~hmac=4b1362cf48c7928b5986a7a0a974599a61dd8f725e0c1a5112d2c348b00c90d0"
 
-import { useState } from 'react';
-import orderCoverImg from '../../../assets/shop/order.jpg'
-import Cover from '../../Shared/Cover/Cover';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-import useMenu from '../../../hooks/useMenu';
-import OrderTab from '../OrderTab/OrderTab';
-import { useParams } from 'react-router';
-import { Helmet } from 'react-helmet-async';
 const MyCourses = () => {
-    const categories = ['salad', 'pizza', 'soup', 'dessert', 'drinks'];
-    const { category } = useParams();
-    const initialIndex = categories.indexOf(category);
-    const [tabIndex, setTabIndex] = useState(initialIndex);
-    const [menu] = useMenu();
-    
-    const desserts = menu.filter(item => item.category === 'dessert');
-    const soup = menu.filter(item => item.category === 'soup');
-    const salad = menu.filter(item => item.category === 'salad');
-    const pizza = menu.filter(item => item.category === 'pizza');
-    const drinks = menu.filter(item => item.category === 'drinks');
     return (
         <div>
-            <Helmet>
-                <title>Bistro Boss | Order Food</title>
-            </Helmet>
-            <Cover img={orderCoverImg} title="Order Food"></Cover>
-            <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-                <TabList>
-                    <Tab>Salad</Tab>
-                    <Tab>Pizza</Tab>
-                    <Tab>Soup</Tab>
-                    <Tab>Dessert</Tab>
-                    <Tab>Drinks</Tab>
-                </TabList>
-                <TabPanel>
-                    <OrderTab items={salad}></OrderTab>
-                </TabPanel>
-                <TabPanel>
-                    <OrderTab items={pizza}></OrderTab>
-                </TabPanel>
-                <TabPanel>
-                    <OrderTab items={soup}></OrderTab>
-                </TabPanel>
-                <TabPanel>
-                    <OrderTab items={desserts}></OrderTab>
-                </TabPanel>
-                <TabPanel>
-                    <OrderTab items={drinks}></OrderTab>
-                </TabPanel>
-            </Tabs>
+           
+            <PageCover img={img} title={'Enrolled Courses'}></PageCover>
+            <h2>hello from my course</h2>
         </div>
     );
 };
