@@ -64,8 +64,12 @@
 
 import { FaHome } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
+import useAdmin from "../hooks/useAdmin";
+import useInstructor from "../hooks/useInstructor";
 
 const Dashboard = () => {
+  const [isAdmin, isAdminLoading] = useAdmin();
+  const [isInstructor, isInstructorLoading] = useInstructor();
   return (
     <div>
       <div className="drawer lg:drawer-open ">
@@ -84,8 +88,17 @@ const Dashboard = () => {
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 h-full text-base-content bg-gradient-to-r from-violet-500 to-pink-700">
             {/* Sidebar content here */}
-            
-            <li>
+            {
+              isAdmin?
+              <>
+              </>
+              :isInstructor?
+              <>
+              <NavLink to="/dashboard/addCourse">Add A Course</NavLink>
+              </>
+              :
+              <>
+              <li>
               <NavLink to='/dashboard/mycourses'>My Courses</NavLink>
             </li>
             <li>
@@ -97,6 +110,10 @@ const Dashboard = () => {
             <li>
               <NavLink>Add Review</NavLink>
             </li>
+              </>
+              
+            }
+            
             <div className="divider"></div>
                     <li><NavLink to="/"><FaHome></FaHome> Home</NavLink> </li>
                     <li><NavLink to="/courses"> Our Menu</NavLink></li>
