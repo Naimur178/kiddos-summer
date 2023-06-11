@@ -13,6 +13,7 @@ import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Layout/Dashboard";
 import AdminHome from "../pages/Dashboard/UserHome.jsx/UserHome";
 import UserHome from "../pages/Dashboard/UserHome.jsx/UserHome";
+import CourseDetails from "../pages/Courses/CourseDetails";
 
 export const router = createBrowserRouter([
     {
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
         {
           path: 'addCourse',
           element: <AddItem></AddItem>
+        },
+        {
+          path: 'courseDetails/:id',
+          element: <CourseDetails></CourseDetails>
         }
       ]
     },
@@ -46,11 +51,6 @@ export const router = createBrowserRouter([
       path: '/dashboard',
       element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
       children: [
-       
-        {
-          path: 'userhome',
-          element: <UserHome></UserHome>
-        },
         {
           path: 'mycourses',
           element: <PrivateRoute><MyCourses></MyCourses></PrivateRoute>
