@@ -8,13 +8,15 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Courses from "../pages/Courses/Courses";
 import MyCourses from "../pages/Dashboard/MyCourses/MyCourses";
-import AddItem from "../pages/Dashboard/AddCourse/AddCourse";
+
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Layout/Dashboard";
 import AdminHome from "../pages/Dashboard/UserHome.jsx/UserHome";
-import UserHome from "../pages/Dashboard/UserHome.jsx/UserHome";
+
 import CourseDetails from "../pages/Courses/CourseDetails";
 import MyCart from "../pages/Dashboard/MyCarts/MyCart";
+import AddCourse from "../pages/Dashboard/AddCourse/AddCourse";
+import InstructorRoute from "./instructorRoute";
 
 export const router = createBrowserRouter([
     {
@@ -38,10 +40,7 @@ export const router = createBrowserRouter([
           element: <Courses></Courses>
         },
         
-        {
-          path: 'addCourse',
-          element: <AddItem></AddItem>
-        },
+        
         {
           path: 'courseDetails/:id',
           element: <CourseDetails></CourseDetails>
@@ -64,7 +63,11 @@ export const router = createBrowserRouter([
         {
           path: 'mycart',
           element: <MyCart></MyCart>
-        }
+        },
+        {
+          path: 'addCourse',
+          element: <InstructorRoute><AddCourse></AddCourse></InstructorRoute>
+        },
 
       ]
     }
