@@ -14,6 +14,7 @@ import Dashboard from "../Layout/Dashboard";
 import AdminHome from "../pages/Dashboard/UserHome.jsx/UserHome";
 import UserHome from "../pages/Dashboard/UserHome.jsx/UserHome";
 import CourseDetails from "../pages/Courses/CourseDetails";
+import MyCart from "../pages/Dashboard/MyCarts/MyCart";
 
 export const router = createBrowserRouter([
     {
@@ -60,6 +61,10 @@ export const router = createBrowserRouter([
           path:'adminhome',
           element: <AdminHome></AdminHome>
         },
+        {
+          path: 'mycart',
+          element: <MyCart></MyCart>
+        }
 
       ]
     }

@@ -21,7 +21,7 @@ const MyCart = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://bistro-boss-server-fawn.vercel.app/carts/${item._id}`, {
+                fetch(`http://localhost:5000/carts/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -74,14 +74,14 @@ const MyCart = () => {
                                 <td>
                                     <div className="avatar">
                                         <div className="mask mask-squircle w-12 h-12">
-                                            <img src={item.image} alt="Avatar Tailwind CSS Component" />
+                                            <img src={item.courseImage} alt="Avatar Tailwind CSS Component" />
                                         </div>
                                     </div>
                                 </td>
                                 <td>
-                                    {item.name}
+                                    {item.courseTitle}
                                 </td>
-                                <td className="text-end">${item.price}</td>
+                                <td className="">${item.price}</td>
                                 <td>
                                     <button onClick={() => handleDelete(item)} className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button>
                                 </td>

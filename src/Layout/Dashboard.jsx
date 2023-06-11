@@ -70,7 +70,7 @@ const Dashboard = () => {
     <div>
       <div className="drawer lg:drawer-open ">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-center justify-center">
+        <div className="drawer-content flex flex-col  ">
           {/* Page content here */}
           <label
             htmlFor="my-drawer-2"
@@ -84,9 +84,7 @@ const Dashboard = () => {
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 h-full text-base-content bg-gradient-to-r from-violet-500 to-pink-700">
             {/* Sidebar content here */}
-            <li>
-              <NavLink to='/dashboard/userhome'><FaHome></FaHome> User Home</NavLink>
-            </li>
+            
             <li>
               <NavLink to='/dashboard/mycourses'>My Courses</NavLink>
             </li>
@@ -94,7 +92,7 @@ const Dashboard = () => {
               <NavLink>Payment History</NavLink>
             </li>
             <li>
-              <NavLink>My Cart</NavLink>
+              <NavLink to='mycart'>Selected Courses</NavLink>
             </li>
             <li>
               <NavLink>Add Review</NavLink>
