@@ -8,14 +8,17 @@ import { AuthContext } from "../../providers/AuthProvider";
 import useAdmin from "../../hooks/useAdmin";
 import Swal from "sweetalert2";
 import useCart from "../../hooks/useCart";
+import useInstructor from "../../hooks/useInstructor";
 
 const Courses = () => {
+
   
   const [courses] = useCourses();
   const [id, setId] = useState();
   const [, refetch] = useCart();
   const {user} = useContext(AuthContext);
   const [isAdmin] = useAdmin();
+  const [isInstructor] = useInstructor();
   const that_course=courses.find(course => course._id=== id )
   const handleAddToCart = item => {
     const { courseTitle, courseImage, price, _id } = item;
@@ -107,9 +110,9 @@ const Courses = () => {
             <div className="card-body">
               <h2 className="card-title">{course.courseTitle}</h2>
               <p>{course.description}</p>
-              <p>Available Seats: {isAdmin? '0':course.available}</p>
+              <p>Available Seats: {isAdmin? '0':course.availableSeats}</p>
               <div className="card-actions justify-between">
-                <button className="btn btn-outline" onClick={()=>handleAddToCart(course)} disabled={user? false:true}>Add to Cart</button>
+                <button className="btn btn-outline" onClick={()=>handleAddToCart(course)} disabled={isAdmin? true: isInstructor? true: false}>Add to Cart</button>
                 <button
                   className="btn btn-outline"
                   onClick={() => {

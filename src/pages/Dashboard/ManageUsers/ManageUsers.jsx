@@ -3,11 +3,15 @@ import { Helmet } from "react-helmet-async";
 import { FaTrashAlt, FaUserShield } from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import useAdmin from "../../../hooks/useAdmin";
+import useInstructor from "../../../hooks/useInstructor";
 
 
 
 const ManageUsers = () => {
     const [axiosSecure] = useAxiosSecure();
+    const [isAdmin,] = useAdmin();
+    const [isInstructor, ] = useInstructor();
     const { data: users = [], refetch } = useQuery(['users'], async () => {
         const res = await axiosSecure.get('/users')
         return res.data;
@@ -32,8 +36,28 @@ const ManageUsers = () => {
             }
         })
     }
+    const handleMakeInstructor = user =>{
+        fetch(`http://localhost:5000/users/instructor/${user._id}`, {
+            method: 'PATCH'
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.modifiedCount){
+                refetch();
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: `${user.displayName} is an Instructor Now!`,
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+        })
+    }
 
     const handleDelete = user => {
+
 
     }
 
@@ -61,10 +85,20 @@ const ManageUsers = () => {
                                 <th>{index + 1}</th>
                                 <td>{user.displayName}</td>
                                 <td>{user.email}</td>
-                                <td>{ user.role === 'admin' ? 'admin' :
-                                    <button onClick={() => handleMakeAdmin(user)} className="btn btn-ghost bg-orange-600  text-white"><FaUserShield></FaUserShield></button> 
+                                <td className="decoration-orange-500">{ user.role === 'admin' ? 'admin' : user.role==="instructor"? 'instructor': "student"
+                                     
                                     }</td>
-                                <td><button onClick={() => handleDelete(user)} className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button></td>
+                                <td>
+                                    { user.role=='user'? <button onClick={()=>handleMakeInstructor(user)} className="btn btn-outline btn-xs" >make Instructor</button>: user.role=='instructor'?
+                                    <button onClick={() => handleMakeAdmin(user)} className="btn btn-outline btn-xs" >
+                                        Make Admin
+                                    </button>
+                                    :
+                                    <></>
+
+                                    }
+
+                                </td>
                             </tr>)
                         }
                         

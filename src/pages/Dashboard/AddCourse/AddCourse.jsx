@@ -67,7 +67,7 @@ const AddCourse = () => {
     
     
     return (
-        <div className="w-full px-10">
+        <div className="w-full px-10 py-10">
             <PageCover img={img} title={title}></PageCover>
             <SectionTItle subHeading="What's new" heading="Add A New Course" ></SectionTItle>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -125,7 +125,7 @@ const AddCourse = () => {
                     </label>
                     <input  type="file" {...register("image", { required: true })} className="file-input file-input-bordered w-full " />
                 </div>
-                <input className="btn btn-sm mt-4" type="submit" value="Add Item" />
+                <input className="btn btn-sm mt-4 btn-outline bg-blue-400 " type="submit" value="Add Course" />
             </form>
         </div>
     );

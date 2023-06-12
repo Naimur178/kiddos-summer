@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../hooks/useCart";
+import useAdmin from "../hooks/useAdmin";
+import useInstructor from "../hooks/useInstructor";
 
 
 const NavBar = () => {
+  const [isAdmin] = useAdmin();
+  const [isInstructor] = useInstructor();
   const {user, logOut} = useContext(AuthContext);
   const [cart] = useCart();
   const handleLogOut=() =>{
@@ -35,6 +39,7 @@ const NavBar = () => {
     <img className="h-14  L" src="https://i.ibb.co/Qc4DFX9/1686129966225-removebg-preview.png" alt="" />
   </div>
   {
+   
     user ? <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li><Link to="/">Home</Link></li>
@@ -56,13 +61,24 @@ const NavBar = () => {
   }
   <div className="navbar-end ">
     {
+       isAdmin? <>
+       <button onClick={handleLogOut} className="btn btn-outline">Logout</button>
+       </>
+       :
+       isInstructor?
+       <>
+       <img className="w-8 rounded-xl me-2" src={user.photoURL} alt="image" />
+      <button onClick={handleLogOut} className="btn btn-outline btn-sm">Logout</button>
+       </>
+       :
+       
      user? <div className="flex gap-2 items-center ">
       <p className="flex text-2xl bg-orange-400 p-3 rounded-3xl"><FaShoppingCart></FaShoppingCart> <div className="badge badge-secondary ">+{cart?.length || 0}</div></p>
       <img className="w-10 rounded-xl" src="" alt="image" />
       <button onClick={handleLogOut} className="btn btn-outline">Logout</button>
      </div>:
      <div>
-      <Link to='/login' className="btn btn-outline">Login</Link>
+      <Link to='/login' className="btn btn-outline btn-sm">Login</Link>
      </div>
     }
   </div>
