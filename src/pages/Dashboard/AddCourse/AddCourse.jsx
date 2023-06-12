@@ -35,14 +35,16 @@ const AddCourse = () => {
         .then(imgResponse => {
             if(imgResponse.success){
                 const courseImage = imgResponse.data.display_url;
-                const {courseTitle, price, outline, category, description} = data;
+                const {courseTitle, price, outline, category, description, seats} = data;
+                const availableSeats =seats;
+                const enrolled = 0;
 
                 const curriculum =outline.split(/[.?!]+/);
                 const status = 'pending';
                 const email = user.email;
                 const instructorName = user.displayName;
 
-                const newItem = {instructorName, courseTitle, price: parseFloat(price), category, courseImage, curriculum, status, email, description }
+                const newItem = {instructorName, courseTitle, price: parseFloat(price), category, courseImage, curriculum, status, email, description, availableSeats, enrolled }
                 console.log(newItem)
                 axiosSecure.post('/courses', newItem)
                 .then(data => {
@@ -97,6 +99,12 @@ const AddCourse = () => {
                             <span className="label-text font-semibold">Price*</span>
                         </label>
                         <input type="number" {...register("price", { required: true })} placeholder="Type here" className="input input-bordered w-full " />
+                    </div>
+                    <div className="form-control w-full ml-4">
+                        <label className="label">
+                            <span className="label-text font-semibold">Accomodation Seats*</span>
+                        </label>
+                        <input type="number" {...register("seats", { required: true })} placeholder="Type here" className="input input-bordered w-full " />
                     </div>
                 </div>
                 <div className="form-control w-full">

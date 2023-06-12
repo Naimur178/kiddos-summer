@@ -66,6 +66,7 @@ import { FaHome } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../hooks/useAdmin";
 import useInstructor from "../hooks/useInstructor";
+import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
 
 const Dashboard = () => {
   const [isAdmin, isAdminLoading] = useAdmin();
@@ -91,9 +92,12 @@ const Dashboard = () => {
             {
               isAdmin?
               <>
+              <NavLink to="/dashboard/users">Users</NavLink>
+              <NavLink to="/dashboard/manageClasses">Manage Classes</NavLink>
               </>
               :isInstructor?
               <>
+              <NavLink to='/dashboard/instructorClasses'>My Classes</NavLink>
               <NavLink to="/dashboard/addCourse">Add A Course</NavLink>
               </>
               :
