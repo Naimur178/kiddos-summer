@@ -67,15 +67,17 @@ import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../hooks/useAdmin";
 import useInstructor from "../hooks/useInstructor";
 import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
-import NavBar from "../shared/NavBar";
+// import NavBar from "../shared/NavBar";
 import Footer from "../shared/Footer";
+import NavBar from "../shared/NavBar/NavBar";
 
 const Dashboard = () => {
   const [isAdmin, isAdminLoading] = useAdmin();
   const [isInstructor, isInstructorLoading] = useInstructor();
   return (
     <div className="w-3/4 mx-auto">
-      <NavBar className=''></NavBar>
+      {/* <NavBar className=''></NavBar> */}
+      <NavBar></NavBar>
       <div className="py-10"></div>
       
       <div className="drawer lg:drawer-open ">

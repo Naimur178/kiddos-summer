@@ -1,8 +1,9 @@
 import { Outlet } from "react-router-dom";
-import NavBar from "../shared/NavBar";
+// import NavBar from "../shared/NavBar";
 import Footer from "../shared/Footer";
 import { useState } from "react";
 import { DarkModeToggle } from "@anatoliygatt/dark-mode-toggle";
+import NavBar from "../shared/NavBar/NavBar";
 
 const Main = () => {
   
