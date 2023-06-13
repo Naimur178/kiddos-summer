@@ -13,7 +13,7 @@ import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Layout/Dashboard";
 import AdminHome from "../pages/Dashboard/UserHome.jsx/UserHome";
 
-import CourseDetails from "../pages/Courses/CourseDetails";
+
 import MyCart from "../pages/Dashboard/MyCarts/MyCart";
 import AddCourse from "../pages/Dashboard/AddCourse/AddCourse";
 import InstructorRoute from "./instructorRoute";
@@ -21,6 +21,8 @@ import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
 import AdminRoute from "./AdminRoutes";
 import ManageClasses from "../pages/Dashboard/ManageClasses/ManageClasses";
 import InstructorClass from "../pages/Dashboard/InstructorClass/InstructorClass";
+import Instructors from "../pages/Instructors/Instructors";
+
 
 export const router = createBrowserRouter([
     {
@@ -43,12 +45,13 @@ export const router = createBrowserRouter([
           path: 'courses',
           element: <Courses></Courses>
         },
-        
-        
         {
-          path: 'courseDetails/:id',
-          element: <CourseDetails></CourseDetails>
+          path: 'instructors',
+          element: <Instructors></Instructors>
         }
+        
+        
+        
       ]
     },
     {

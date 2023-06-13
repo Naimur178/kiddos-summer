@@ -103,7 +103,7 @@ const Login = () => {
                 localStorage.setItem('access-token', data.token)
             })
         } )
-        .catch(error => {
+        .catch(() => {
             setErrors('Invalid Email or password')
         })
 

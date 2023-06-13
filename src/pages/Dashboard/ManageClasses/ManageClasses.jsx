@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
-import { FaTrashAlt, FaUserShield } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
@@ -57,6 +57,22 @@ const ManageClasses = () => {
                     })
     }
 
+    const handleReject = (course) =>{
+        axiosSecure.patch(`/courses/deny/${course._id}`)
+                    .then(res => {
+                        console.log('update res', res.data);
+                        if (res.data.modifiedCount) {
+                            refetch();
+                            Swal.fire(
+                                'Updated!',
+                                'Course has been Denied',
+                                'success'
+                            )
+                        }
+                    })
+    }
+
+
     return (
         <div className="w-full">
             <Helmet>
@@ -85,8 +101,8 @@ const ManageClasses = () => {
                                 <td>{course.status}
                                     </td>
                                 <td className="flex items-center gap-2">
-                                <button className="btn btn-outline btn-xs bg-red-500 text-white">Reject</button>
-                                <button onClick={()=>handleApprove(courses)} className="bg-green-500 text-white btn btn-outline btn-xs">Approve</button>
+                                <button onClick={()=>handleReject(course)} className="btn btn-outline btn-xs bg-red-500 text-white">Reject</button>
+                                <button onClick={()=>handleApprove(course)} className="bg-green-500 text-white btn btn-outline btn-xs">Approve</button>
                                 
                                     <button onClick={() => handleDelete(course)} className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button>
                                 </td>

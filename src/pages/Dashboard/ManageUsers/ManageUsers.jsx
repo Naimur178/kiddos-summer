@@ -54,10 +54,7 @@ const ManageUsers = () => {
         })
     }
 
-    const handleDelete = user => {
-
-
-    }
+    
 
     return (
         <div className="w-full">

@@ -70,6 +70,9 @@ const NavBar = () => {
                 <Link to="/courses">All Courses</Link>
               </li>
               <li>
+                <Link to="/instructors">Instructors</Link>
+              </li>
+              <li>
                 <Link to="/dashboard">Dashboard</Link>
               </li>
 
@@ -131,12 +134,15 @@ const NavBar = () => {
           ) : user ? (
             <div className="flex gap-2 items-center ">
               <p className="flex text-2xl p-3 rounded-3xl">
+                <Link to='/dashboard/mycart'>
                 <div className="indicator">
                   <span className="indicator-item badge badge-secondary">
                     +{cart?.length || 0}
                   </span>
                   <FaShoppingCart></FaShoppingCart>
                 </div>
+                
+                </Link>
               </p>
               <div
                 className="tooltip tooltip-bottom"
