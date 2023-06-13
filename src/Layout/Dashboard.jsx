@@ -120,7 +120,7 @@ const Dashboard = () => {
             
             <div className="divider"></div>
                     <li><NavLink to="/"><FaHome></FaHome> Home</NavLink> </li>
-                    <li><NavLink to="/courses"> Our Menu</NavLink></li>
+                    <li><NavLink to="/courses"> All Courses</NavLink></li>
                     
           </ul>
         </div>

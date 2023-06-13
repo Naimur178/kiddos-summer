@@ -13,7 +13,7 @@ const ManageClasses = () => {
         return res.data;
     })
 
-    const handleDelete = item => {
+    const handleDelete = course => {
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -25,7 +25,7 @@ const ManageClasses = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                axiosSecure.delete(`/courses/${item._id}`)
+                axiosSecure.delete(`/courses/${course._id}`)
                     .then(res => {
                         console.log('deleted res', res.data);
                         if (res.data.deletedCount > 0) {
@@ -42,7 +42,20 @@ const ManageClasses = () => {
         })
     }
 
-    
+    const handleApprove = (course) =>{
+        axiosSecure.patch(`/courses/approved/${course._id}`)
+                    .then(res => {
+                        console.log('update res', res.data);
+                        if (res.data.modifiedCount) {
+                            refetch();
+                            Swal.fire(
+                                'Updated!',
+                                'Course has been Approved',
+                                'success'
+                            )
+                        }
+                    })
+    }
 
     return (
         <div className="w-full">
@@ -73,7 +86,7 @@ const ManageClasses = () => {
                                     </td>
                                 <td className="flex items-center gap-2">
                                 <button className="btn btn-outline btn-xs bg-red-500 text-white">Reject</button>
-                                <button className="bg-green-500 text-white btn btn-outline btn-xs">Approve</button>
+                                <button onClick={()=>handleApprove(courses)} className="bg-green-500 text-white btn btn-outline btn-xs">Approve</button>
                                 
                                     <button onClick={() => handleDelete(course)} className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button>
                                 </td>

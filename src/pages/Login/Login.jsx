@@ -100,7 +100,7 @@ const Login = () => {
             .then(data => {
                 console.log('jwt response', data);
                 //Not the best way to set in the localStorage
-                localStorage.setItem('kids-access-token', data.token)
+                localStorage.setItem('access-token', data.token)
             })
         } )
         .catch(error => {

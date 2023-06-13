@@ -1,17 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
-import { FaTrashAlt, FaUserShield } from "react-icons/fa";
+
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
-import useAdmin from "../../../hooks/useAdmin";
-import useInstructor from "../../../hooks/useInstructor";
+
 
 
 
 const ManageUsers = () => {
     const [axiosSecure] = useAxiosSecure();
-    const [isAdmin,] = useAdmin();
-    const [isInstructor, ] = useInstructor();
+    
     const { data: users = [], refetch } = useQuery(['users'], async () => {
         const res = await axiosSecure.get('/users')
         return res.data;
