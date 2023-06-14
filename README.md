@@ -12,3 +12,5 @@
 10. React Router and Firebase Authentication: React Router is used for client-side routing, enabling navigation between different pages of the website. Firebase Authentication is utilized for user authentication, offering a secure and reliable authentication system.
 
 These points highlight the main features and technologies used in building "Kiddos Summer," showcasing its functionality and the tools and frameworks employed to deliver an engaging online learning experience for kids during the summer season.
+
+Live Wbsite Link: https://kiddos-summer.web.app/
