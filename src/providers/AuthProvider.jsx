@@ -37,7 +37,7 @@ const AuthProvider = ({children}) => {
             setUser(loggedUser);
             setLoading(false);
             if(loggedUser){
-                axios.post('http://localhost:5000/jwt', {email: loggedUser.email})
+                axios.post('https://last-assignment-server-iota.vercel.app/jwt', {email: loggedUser.email})
                 .then(data =>{
                     // console.log(data.data.token)
                     localStorage.setItem('access-token', data.data.token)

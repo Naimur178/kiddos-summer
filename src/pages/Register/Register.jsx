@@ -75,7 +75,7 @@
 //             .then(() => {
 //                 console.log('user name updated');
 //                 console.log(user)
-//                 fetch('http://localhost:5000/users', {
+
 //                             method: 'POST',
 //                             headers: {
 //                                 'content-type': 'application/json'
@@ -276,7 +276,7 @@ const Register = () => {
       .then(() => {
         console.log('User name updated');
         console.log(user);
-        fetch('http://localhost:5000/users', {
+        fetch('https://last-assignment-server-iota.vercel.app/users', {
           method: 'POST',
           headers: {
             'content-type': 'application/json',

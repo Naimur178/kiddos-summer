@@ -214,7 +214,7 @@ const Login = () => {
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
         const loggedUser = result.user;
-        fetch("http://localhost:5000/users", {
+        fetch("https://last-assignment-server-iota.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -260,7 +260,7 @@ const Login = () => {
 
         navigate(from, { replace: true });
         setErrors(null);
-        fetch("http://localhost:5000/jwt", {
+        fetch("https://last-assignment-server-iota.vercel.app/jwt", {
           method: "POST",
           headers: {
             "content-type": "application/json",

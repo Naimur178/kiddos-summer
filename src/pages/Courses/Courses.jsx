@@ -25,7 +25,7 @@ const Courses = () => {
     console.log(item);
     if(user && user.email){
         const cartItem = {menuItemId: _id, courseTitle, courseImage, price, email: user.email}
-        fetch('http://localhost:5000/carts', {
+        fetch('https://last-assignment-server-iota.vercel.app/carts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
