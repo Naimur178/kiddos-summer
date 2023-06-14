@@ -36,7 +36,7 @@ const AddCourse = () => {
             if(imgResponse.success){
                 const courseImage = imgResponse.data.display_url;
                 const {courseTitle, price, outline, category, description, seats} = data;
-                const availableSeats =seats;
+                const availableSeats =parseInt(seats);
                 const enrolled = 0;
 
                 const curriculum =outline.split(/[.?!]+/);
@@ -102,10 +102,11 @@ const AddCourse = () => {
                     </div>
                     <div className="form-control w-full ml-4">
                         <label className="label">
-                            <span className="label-text font-semibold">Accomodation Seats*</span>
+                            <span className="label-text font-semibold">Seats</span>
                         </label>
-                        <input type="number" {...register("seats", { required: true })} placeholder="Type here" className="input input-bordered w-full " />
+                        <input type='number' step="any" {...register("seats", { required: true })} placeholder="Type here" className="input input-bordered w-full " />
                     </div>
+                    
                 </div>
                 <div className="form-control w-full">
                     <label className="label">

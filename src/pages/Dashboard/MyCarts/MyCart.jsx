@@ -73,7 +73,7 @@ const MyCart = () => {
                 <td>{item.courseTitle}</td>
                 <td className="">${item.price}</td>
                 <td className="">
-                  <Link to="/dashboard/payment">
+                  <Link to={`/dashboard/payment?courseId=${item._id}`}>
                     <button className="btn btn-warning btn-sm">PAY</button>
                   </Link>
                   <button

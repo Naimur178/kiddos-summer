@@ -24,6 +24,7 @@ import InstructorClass from "../pages/Dashboard/InstructorClass/InstructorClass"
 import Instructors from "../pages/Instructors/Instructors";
 import AddReview from "../pages/Dashboard/AddReview/AddReview";
 import Payment from "../pages/Dashboard/Payment/Payment";
+import Error from "../Error";
 
 
 
@@ -106,5 +107,9 @@ export const router = createBrowserRouter([
         }
 
       ]
+    },
+    {
+      path: '*',
+      element: <Error></Error>
     }
   ]);
