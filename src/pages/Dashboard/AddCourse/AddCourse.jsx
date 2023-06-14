@@ -7,7 +7,7 @@ import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import PageCover from '../../../shared/PageCovers/PageCovers';
 
 import useAuth from '../../../hooks/useAuth';
-const img = 'https://img.freepik.com/free-vector/stylish-glowing-digital-red-lines-banner_1017-23964.jpg?w=1380&t=st=1686397129~exp=1686397729~hmac=c4e3f9767de16b0c146257ab67c23c4956c9ecb372106b47ef83ff772915304a'
+export const img = 'https://img.freepik.com/free-vector/stylish-glowing-digital-red-lines-banner_1017-23964.jpg?w=1380&t=st=1686397129~exp=1686397729~hmac=c4e3f9767de16b0c146257ab67c23c4956c9ecb372106b47ef83ff772915304a'
 
 const title = 'Add A Course';
 
