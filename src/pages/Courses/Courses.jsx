@@ -1,5 +1,5 @@
 const cover_img = "https://i.ibb.co/Qc4DFX9/1686129966225-removebg-preview.png";
-import { Link, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import SectionTItle from "../../components/SectionTitle/SectionTItle";
 import useCourses from "../../hooks/useCourses";
 import PageCover from "../../shared/PageCovers/PageCovers";

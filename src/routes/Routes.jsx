@@ -10,7 +10,7 @@ import Courses from "../pages/Courses/Courses";
 import MyCourses from "../pages/Dashboard/MyCourses/MyCourses";
 
 import PrivateRoute from "./PrivateRoute";
-import Dashboard from "../Layout/Dashboard";
+import Dashboard from "../Layout/Dashboard/Dashboard";
 import AdminHome from "../pages/Dashboard/UserHome.jsx/UserHome";
 
 
@@ -22,6 +22,8 @@ import AdminRoute from "./AdminRoutes";
 import ManageClasses from "../pages/Dashboard/ManageClasses/ManageClasses";
 import InstructorClass from "../pages/Dashboard/InstructorClass/InstructorClass";
 import Instructors from "../pages/Instructors/Instructors";
+import AddReview from "../pages/Dashboard/AddReview/AddReview";
+import PaymentHistory from "../pages/Dashboard/PaymentHistory/PaymentHistory";
 
 
 export const router = createBrowserRouter([
@@ -62,6 +64,15 @@ export const router = createBrowserRouter([
           path: 'mycourses',
           element: <PrivateRoute><MyCourses></MyCourses></PrivateRoute>
 
+        },
+        {
+          path: 'addReview',
+          element: <AddReview></AddReview>
+
+        },
+        {
+          path: 'paymentHistory',
+          element: <PaymentHistory></PaymentHistory>
         },
         {
           path:'adminhome',

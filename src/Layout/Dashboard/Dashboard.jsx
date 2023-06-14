@@ -64,16 +64,18 @@
 
 import { FaHome } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
-import useAdmin from "../hooks/useAdmin";
-import useInstructor from "../hooks/useInstructor";
-import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
+import useAdmin from "../../hooks/useAdmin";
+import useInstructor from "../../hooks/useInstructor";
+
+
 // import NavBar from "../shared/NavBar";
-import Footer from "../shared/Footer";
-import NavBar from "../shared/NavBar/NavBar";
+import Footer from "../../shared/Footer";
+import NavBar from "../../shared/NavBar/NavBar";
+
 
 const Dashboard = () => {
-  const [isAdmin, isAdminLoading] = useAdmin();
-  const [isInstructor, isInstructorLoading] = useInstructor();
+  const [isAdmin, ] = useAdmin();
+  const [isInstructor, ] = useInstructor();
   return (
     <div className="w-3/4 mx-auto">
       {/* <NavBar className=''></NavBar> */}
@@ -92,14 +94,14 @@ const Dashboard = () => {
           </label>
           <Outlet></Outlet>
         </div>
-        <div className="drawer-side">
+        <div className="drawer-side bg-gradient-to-r from-violet-500 to-pink-700">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-80 h-full text-base-content bg-gradient-to-r from-violet-500 to-pink-700">
+          <ul className="menu p-4 w-80">
             {/* Sidebar content here */}
             {
               isAdmin?
               <>
-              <NavLink to="/dashboard/users">Users</NavLink>
+              <NavLink to="/dashboard/users" activeClassName='active' className=''>Users</NavLink>
               <NavLink to="/dashboard/manageClasses">Manage Classes</NavLink>
               </>
               :isInstructor?
@@ -110,16 +112,16 @@ const Dashboard = () => {
               :
               <>
               <li>
-              <NavLink to='/dashboard/mycourses'>My Courses</NavLink>
+              <NavLink to='/dashboard/mycourses' className=''>My Courses</NavLink>
             </li>
             <li>
-              <NavLink>Payment History</NavLink>
+              <NavLink className='' to='/dashboard/paymentHistory'>Payment History</NavLink>
             </li>
             <li>
-              <NavLink to='mycart'>Selected Courses</NavLink>
+              <NavLink to='/dashboard/mycart' className='' >Selected Courses</NavLink>
             </li>
             <li>
-              <NavLink>Add Review</NavLink>
+              <NavLink className='' to='/dashboard/addReview'>Add Review</NavLink>
             </li>
               </>
               
