@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import SectionTItle from '../../../components/SectionTitle/SectionTItle';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import PageCover from '../../../shared/PageCovers/PageCovers';
-import { useState } from 'react';
+
 import useAuth from '../../../hooks/useAuth';
 const img = 'https://img.freepik.com/free-vector/stylish-glowing-digital-red-lines-banner_1017-23964.jpg?w=1380&t=st=1686397129~exp=1686397729~hmac=c4e3f9767de16b0c146257ab67c23c4956c9ecb372106b47ef83ff772915304a'
 
@@ -67,10 +67,10 @@ const AddCourse = () => {
     
     
     return (
-        <div className="w-full px-10 py-10">
+        <div className="w-full px-3">
             <PageCover img={img} title={title}></PageCover>
             <SectionTItle subHeading="What's new" heading="Add A New Course" ></SectionTItle>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} className='bg-base-200 p-5 rounded-2xl'>
                 <div className="form-control w-full mb-4">
                     <label className="label">
                         <span className="label-text font-semibold">Course Title</span>
@@ -98,7 +98,7 @@ const AddCourse = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Price*</span>
                         </label>
-                        <input type="number" {...register("price", { required: true })} placeholder="Type here" className="input input-bordered w-full " />
+                        <input type="number" step="any" {...register("price", { required: true })} placeholder="Type here" className="input input-bordered w-full " />
                     </div>
                     <div className="form-control w-full ml-4">
                         <label className="label">

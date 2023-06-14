@@ -98,7 +98,12 @@ const ManageClasses = () => {
                                 <th>{index + 1}</th>
                                 <td>{course.courseTitle}</td>
                                 <td>{course.instructorName}</td>
-                                <td>{course.status}
+                                <td>{
+                                    course.status =='pending'?
+                                    <span className="bg-yellow-400 px-2 rounded-xl">{course.status}</span>:course.status =='denied'? <span className="bg-red-400 px-2 rounded-xl">{course.status}</span>:
+                                    <span className="bg-green-400 px-2 rounded-xl">{course.status}</span>
+                                    
+                                }
                                     </td>
                                 <td className="flex items-center gap-2">
                                 <button onClick={()=>handleReject(course)} className="btn btn-outline btn-xs bg-red-500 text-white">Reject</button>

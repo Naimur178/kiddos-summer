@@ -7,7 +7,11 @@ import { Link, NavLink } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import './NavBar.css'
 
+
+
+
 const NavBar = () => {
+    
   const [isAdmin] = useAdmin();
   const [isInstructor] = useInstructor();
   const { user, logOut } = useContext(AuthContext);
@@ -45,8 +49,8 @@ const NavBar = () => {
               className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <NavLink
-                >Home</NavLink>
+                <Link
+                >Home</Link>
               </li>
               <li>
                 <Link>Courses</Link>
@@ -66,7 +70,7 @@ const NavBar = () => {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
-                <NavLink to="/" activeClassName="active-link" exact>Home</NavLink>
+                <Link to="/" activeClassName="active-link" exact>Home</Link>
               </li>
               <li>
                 <Link to="/courses">All Courses</Link>
@@ -81,6 +85,7 @@ const NavBar = () => {
               <li>
                 <Link>About Us</Link>
               </li>
+              
             </ul>
           </div>
         ) : (
