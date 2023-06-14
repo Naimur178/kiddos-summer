@@ -10,7 +10,9 @@ import './NavBar.css'
 
 
 
+
 const NavBar = () => {
+    
     
   const [isAdmin] = useAdmin();
   const [isInstructor] = useInstructor();
@@ -25,7 +27,7 @@ const NavBar = () => {
   };
   return (
     <div>
-      <div className="navbar fixed z-10 w-3/4 bg-base-100">
+      <div className="navbar fixed z-10 lg:w-3/4 bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,17 +48,24 @@ const NavBar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="nav-small menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link
+                <Link to='/'
                 >Home</Link>
               </li>
               <li>
-                <Link>Courses</Link>
+                <Link to='/courses'> All Courses</Link>
               </li>
               <li>
-                <Link>Item 3</Link>
+                <Link to="/instructors">Instructors</Link>
+              </li>
+              <li>
+                <Link to="/dashboard">Dashboard</Link>
+              </li>
+
+              <li>
+                <Link>About Us</Link>
               </li>
             </ul>
           </div>
@@ -85,6 +94,7 @@ const NavBar = () => {
               <li>
                 <Link>About Us</Link>
               </li>
+              <li></li>
               
             </ul>
           </div>

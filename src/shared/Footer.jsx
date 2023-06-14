@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <div className="flex text-white">
-        <footer className="w-1/2 footer p-10 bg-gradient-to-r to-violet-500 from-gray-700">
+      <div className="lg:flex text-white">
+        <footer className="lg:w-1/2 footer p-10 bg-gradient-to-r to-violet-500 from-gray-700">
           <div>
             <img
               className="w-20"
@@ -19,7 +19,7 @@ const Footer = () => {
             </p>
           </div>
         </footer>
-        <footer className="w-1/2 footer p-10 bg-gradient-to-r from-violet-500 to-gray-700 text-white">
+        <footer className="lg:w-1/2 footer p-10 bg-gradient-to-r from-violet-500 to-gray-700 text-white">
           <div>
             <span className="footer-title">Social</span>
             <div className="grid grid-flow-col gap-4">

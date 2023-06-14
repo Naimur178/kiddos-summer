@@ -3,9 +3,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Banner = () => {
     return (
-        <Carousel>
+        <Carousel className='w-full'>
         <div>
-            <img src="https://img.freepik.com/free-photo/cute-little-girl-drawing-with-paint-paintbrush-home_155003-15806.jpg?w=1060&t=st=1686131535~exp=1686132135~hmac=a33c1c3520179a1348c79b62c5898e80f78d6217e55bad05287b046a871c3261" />
+            <img className='' src="https://img.freepik.com/free-photo/cute-little-girl-drawing-with-paint-paintbrush-home_155003-15806.jpg?w=1060&t=st=1686131535~exp=1686132135~hmac=a33c1c3520179a1348c79b62c5898e80f78d6217e55bad05287b046a871c3261" />
             <p className="legend">Legend 1</p>
         </div>
         <div>

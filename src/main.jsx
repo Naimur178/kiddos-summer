@@ -8,6 +8,7 @@ import { router } from "./routes/Routes.jsx";
 import { RouterProvider } from "react-router-dom";
 import AuthProvider from "./providers/AuthProvider";
 import { HelmetProvider } from "react-helmet-async";
+import ThemeWrapper from "./components/DarkTheme/ThemeProvider";
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -15,7 +16,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <HelmetProvider>
       <AuthProvider>
         <QueryClientProvider client={queryClient}>
+          <ThemeWrapper>
           <RouterProvider router={router} />
+          </ThemeWrapper>
         </QueryClientProvider>
       </AuthProvider>
     </HelmetProvider>

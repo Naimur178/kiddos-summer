@@ -8,7 +8,7 @@ import NavBar from "../shared/NavBar/NavBar";
 const Main = () => {
   
   return (
-    <div className="w-3/4 mx-auto">
+    <div className="lg:w-3/4 mx-auto ">
       <NavBar></NavBar>
       <Outlet></Outlet>
       <Footer></Footer>

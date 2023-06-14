@@ -103,7 +103,7 @@ const Courses = () => {
 
       <div className="grid grid-cols-3 gap-4">
         {courses.map((course) => (
-          <div key={course._id} className="card  bg-base-100 shadow-xl">
+          <div key={course._id} className="card course-card shadow-xl">
             <figure>
               <img src={course.courseImage} alt="Shoes" />
             </figure>
